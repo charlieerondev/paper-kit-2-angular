@@ -34,8 +34,7 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <button type="button" class="btn btn-outline-default btn-round">Default</button>
-                    <button type="button" class="btn btn-outline-primary btn-round">Primary</button>
+                    <button type="button" class="btn btn-outline-default btn-round">Default</button><button type="button" class="btn btn-outline-primary btn-round">Primary</button>
                     <button type="button" class="btn btn-outline-info btn-round">Info</button>
                     <button type="button" class="btn btn-outline-success btn-round">Success</button>
                     <button type="button" class="btn btn-outline-warning btn-round">Warning</button>
@@ -91,9 +90,11 @@
                 </div>
             </div>
             <div class="col-sm-3">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-group" aria-hidden="true"></i></span>
+                <div class="input-group" [ngClass]="{'input-group-focus':focus===true}">
+                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" (focus)="focus=true" (blur)="focus=false" >
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon1"><i class="fa fa-group" aria-hidden="true"></i></span>
+                    </div>
                 </div>
             </div>
         </div>

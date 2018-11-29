@@ -1,0 +1,103 @@
+.navbar {
+    .navbar-brand {
+        img {
+            transition: all .2s;
+        }
+        #the-logo {
+            max-width: 10rem;
+            display: none;
+        }
+        #the-logo-sm {
+            max-width: 8rem;
+        }
+    }
+    &.navbar-transparent {
+        padding: 0;
+        .navbar-brand {
+            #the-logo {
+                display: inline-block;
+            }
+            #the-logo-sm {
+                display: none;
+            }
+        }
+        .nav-item {
+            .nav-link {
+                .text {
+                    color:#fff !important;
+                }
+            }
+        }
+    }
+    & > .container {
+        align-items: start;
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                opacity: 1;
+                i {
+                    top: 1px;
+                    right: 6px;
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    .profile-content {
+        .owner {
+            .avatar {
+                max-width: 250px;
+                margin: -119px auto 0;
+            }
+        }
+    }
+}
+
+.pre-letter {
+    font-size: 42px;
+    // position: absolute;
+    left: -12px;
+    top: -8px;
+    font-weight: bold;
+}
+
+.featured {
+    li {
+        img {
+            max-width:200px;
+            @media(max-width: 767px) {
+                max-width:150px;
+            }
+        }
+        h5 {
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.5em;
+        }
+        h6 {
+            @media(min-width:768px){
+                position: relative;
+                top:40%
+            }
+        }
+    }
+    &#musicians {
+        li {
+            img {
+                max-width:200px;
+                @media(max-width: 767px) {
+                    max-width:150px;
+                }
+            }
+            h5 {
+                @media(min-width:768px){
+                    position: relative;
+                    top:40%
+                }
+            }
+        }
+    }
+}
