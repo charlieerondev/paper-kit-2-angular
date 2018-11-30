@@ -2,8 +2,8 @@
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="/">
-                <img id="the-logo" src="/src/assets/img/wait-logo-stroke.png"/>
-                <img id="the-logo-sm" src="/src/assets/img/wait-logo-web-sm.png"/>
+                <img id="the-logo" src="assets/img/wait-logo-stroke.png" *ngIf="!isHome()"/>
+                <img id="the-logo-sm" src="assets/img/wait-logo-web-sm.png"/>
             </a>
             <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
                 <span class="navbar-toggler-bar"></span>
@@ -11,25 +11,31 @@
                 <span class="navbar-toggler-bar"></span>
             </button>
         </div>
-        <div class="collapse navbar-collapse" id="navbarToggler">
+        <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="Follow us on YouTube" data-placement="bottom" href="#" target="_blank">
                         <i class="fa fa-youtube"></i>
                         <p class="text">YouTube</p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/weareintransitband" target="_blank">
                         <i class="fa fa-facebook-square"></i>
                         <p class="text">Facebook</p>
                     </a>
                 </li>
-                <li class="nav-item" *ngIf="!isDocumentation()">
+                <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="Follow us on Bandcamp" data-placement="bottom" href="https://weareintransit.bandcamp.com/" target="_blank">
                         <i class="fa fa-bandcamp"></i>
                         <p class="text">Bandcamp</p>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link" rel="tooltip" title="Join the mailing list" data-placement="bottom" onclick="alert('Still working on it...');">
+                        <i class="fa fa-fire"></i>
+                        <p class="text">Join the mailing list</p>
+                    </span>
                 </li>
             </ul>
         </div>

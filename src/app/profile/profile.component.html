@@ -1,22 +1,38 @@
 <div class="wrapper">
-    <div class="page-header page-header-xs" data-parallax="true" style="background-image: url('./assets/img/art-web.jpg');">
+    <div class="page-header page-header-xs" data-parallax="true">
         <div class="filter"></div>
     </div>
+    
     <div class="section profile-content">
         <div class="container">
             <div class="owner">
                 <div class="avatar">
-                    <img src="./assets/img/profile-2-web-sm.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                    <img src="../../assets/img/profile/profile-2-web-sm.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
                 </div>
                 <div class="name">
                     <img src="./assets/img/wait-logo-blk.png" class="mw-100 w-50"/>
                     <!-- <h4 class="title">We Are In Transit<br /></h4> -->
-                    <h5 class="description">Bio</h5>
+                    <div id="bandcamp-embed-container" class="text-center">
+                            <iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1659672560/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://willsessions.bandcamp.com/album/bobo-breaks-35-drum-breaks">Bobo Breaks (35 Drum Breaks) by Bobo Breaks</a></iframe>
+                        </div>
+                    <h2 class="description m-5">Bio</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 ml-auto mr-auto">
+                    <p><span class="pre-letter">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Pellentesque efficitur, enim non aliquet egestas, 
+                        lorem dui hendrerit metus, in consequat libero lectus ut massa. 
+                        Curabitur vel dapibus neque, vitae congue felis. Etiam blandit mi vel orci fringilla facilisis. 
+                    </p>
+                    <br/>
                     <p>
+                        Donec rutrum, tortor vel cursus fringilla, elit augue sodales enim, vel porttitor nisi arcu vel nisl. 
+                        Nullam rutrum quam nec ornare tempor. Proin eget tempor nunc, vel ornare turpis. 
+                        Nam consectetur, magna eget convallis tristique, massa dolor blandit enim, commodo bibendum tortor felis vel metus. 
+                        Aenean porttitor non ligula at posuere. Praesent ut pulvinar sapien. Proin accumsan mi ut ipsum suscipit congue.
+                    </p>
+                    <!-- <p>
                         <span class="pre-letter">S</span>ometime around 2011, guitarist and composer Charlie Eron burned a CD with a couple demo tracks on it and handed it to Max Phelps and Alex Weber at a metal show in Frederick, MD. 
                         They thought it was pretty cool, and that was that. 
                     </p>
@@ -25,17 +41,18 @@
                         Many song iterations, revisions, and several years later, the idea that time is starkly linear and unrecoverable came to Charlie while working at a desk job staring vacantly into 
                         a computer screen. And thus, We Are In Transit was born.
                     </p>
-                    <br />
-                    <button class="btn btn-outline-default btn-round"><i class="fa fa-cog"></i> Settings</button>
+                    <br /> -->
+                    <button type="button" class="btn btn-danger btn-round mx-auto d-block m-3" onclick="alert('Still working on it!');"><i class="fa fa-envelope"></i> Contact</button>
                 </div>
             </div>
             <br/>
+            <app-components></app-components>
             <div class="nav-tabs-navigation">
                 <div class="nav-tabs-wrapper">
                     <ngb-tabset [justify]="'center'">
                         <ngb-tab title="Featured Musicians">
                             <ng-template ngbTabContent >
-                                <div class="row featured" id="musicians">
+                                <div class="featured" id="musicians">
                                     <div class="col-lg-6 col-md-9 ml-auto mr-auto">
                                         <ul class="list-unstyled">
                                             <li>
@@ -96,8 +113,8 @@
                         </ngb-tab>
                         <ngb-tab title="Artwork">
                             <ng-template ngbTabContent>
-                                <div class="row featured" id="artwork">
-                                    <div class="col-lg-6 col-md-9 ml-auto mr-auto">
+                                <div class="featured" id="artwork">
+                                    <div class="col-md-9 ml-auto mr-auto">
                                         <ul class="list-unstyled">
                                             <li>
                                                 <div class="row">
@@ -126,7 +143,9 @@
                                                         <h6>Will Shanklin Vibrational Art<br/><small>"Chaos Mandala"</small></h6>
                                                     </div>
                                                     <div class="col-sm-4 ml-auto">
-                                                        <img src="https://static1.squarespace.com/static/55032828e4b0956f89b8a13a/5788381a1b631b1bfd4498a7/5788e9bd893fc044e271f600/1468590532074/1chaos+%281%29.jpg?format=1000w" alt="Chaos Mandala" class="img-no-padding img-responsive"/>
+                                                        <a href="https://www.willshanklin333.com/chaos-mandala/" target="_blank">
+                                                            <img src="https://static1.squarespace.com/static/55032828e4b0956f89b8a13a/5788381a1b631b1bfd4498a7/5788e9bd893fc044e271f600/1468590532074/1chaos+%281%29.jpg?format=1000w" alt="Chaos Mandala" class="img-no-padding img-responsive"/>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -136,6 +155,17 @@
                                 </div>
                             </ng-template>
                         </ngb-tab>
+                        <ngb-tab title="Merch">
+                                <ng-template ngbTabContent>
+                                    <div class="featured" id="merch">
+                                        <div class="col-md-9 ml-auto mr-auto">
+                                            <ul class="list-unstyled">
+                                                <li>To do</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </ngb-tab>
                     </ngb-tabset>
                 </div>
             </div>

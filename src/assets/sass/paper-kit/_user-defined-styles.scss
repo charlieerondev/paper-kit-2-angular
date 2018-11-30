@@ -1,5 +1,9 @@
 .navbar {
+    @media(max-width: 991px) {
+        // padding-top: 18px; //bug?
+    }
     .navbar-brand {
+        padding: 5px;
         img {
             transition: all .2s;
         }
@@ -12,7 +16,9 @@
         }
     }
     &.navbar-transparent {
-        padding: 0;
+        @media(min-width: 992px) {
+            padding: 0;
+        }
         .navbar-brand {
             #the-logo {
                 display: inline-block;
@@ -24,7 +30,9 @@
         .nav-item {
             .nav-link {
                 .text {
-                    color:#fff !important;
+                    @media(min-width:992px){
+                        color:#fff !important;
+                    }
                 }
             }
         }
@@ -46,11 +54,60 @@
 }
 
 .wrapper {
+    background-image: url('/assets/img/art-web.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+
+    #bandcamp-embed-container {
+        z-index: 9;
+        width: 100%;
+        iframe {
+            width:21%;
+            border: 0; 
+            height: 120px;
+        }
+    }
+    .page-header {
+        background: initial;
+        min-height: 14vh !important;
+    }
     .profile-content {
-        .owner {
-            .avatar {
-                max-width: 250px;
-                margin: -119px auto 0;
+        z-index:9;
+        background-color: rgba(0, 0, 0, 0.5);
+        & > .container {
+            background: #fff;
+            opacity: 0.9;
+            .owner {
+                .name {
+                    img {
+                        @media(min-width: 1200px) {
+                            margin-bottom: -100px;
+                            margin-left: 5px;
+                        }
+                        @media(max-width: 991px) {
+                            margin-bottom: 25px;
+                        }
+                    }
+                }
+                .avatar {
+                    max-width: 250px;
+                    margin: -119px auto 0;
+                }
+            }
+        }
+        .nav-tabs-navigation {
+            .nav-tabs-wrapper {
+                margin: initial;
+                .nav-tabs {
+                    .nav-item {
+                        .nav-link {
+                            &.active {
+                                font-weight:bold;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -68,7 +125,7 @@
     li {
         img {
             max-width:200px;
-            @media(max-width: 767px) {
+            @media(max-width: 575px) {
                 max-width:150px;
             }
         }
@@ -78,7 +135,7 @@
             line-height: 1.5em;
         }
         h6 {
-            @media(min-width:768px){
+            @media(min-width:576px){
                 position: relative;
                 top:40%
             }
@@ -88,16 +145,30 @@
         li {
             img {
                 max-width:200px;
-                @media(max-width: 767px) {
+                @media(max-width: 576px) {
                     max-width:150px;
                 }
             }
             h5 {
-                @media(min-width:768px){
+                @media(min-width:576px){
                     position: relative;
                     top:40%
                 }
             }
+        }
+    }
+    &#artwork {
+        img {
+            max-height: 165px;
+        }
+    }
+}
+
+.footer {
+    .footer-nav, .credits {
+        @media(max-width:991px) {
+            width:100%;
+            text-align: center;
         }
     }
 }
