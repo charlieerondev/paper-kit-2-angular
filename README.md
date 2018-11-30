@@ -1,5 +1,5 @@
 # Band Website 
-### [Check it out!](http://weareintransit.com) 
+### [A work in progress. Check it out!](https://weareintransit-v2.firebaseapp.com/home) 
 ### Forked from [Paper Kit 2 Angular](https://github.com/creativetimofficial/paper-kit-2-angular) 
 ### READ.ME below
 
